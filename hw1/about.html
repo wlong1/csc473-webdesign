@@ -4,49 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css">
-  <title>Fastest Food</title>
+  <title>About - Fastest Food</title>
 </head>
 <body>
   <header class="header">
     <div class="logo">
-        <a href="index.html"><img src="img/logo.webp" alt="Logo" /></a>
-        <h2>Fastest Food</h2>
+      <a href="index.html"><img src="img/logo.webp" alt="Logo" /></a>
+      <h2>Fastest Food</h2>
     </div>
     <button class="menu-toggle">☰</button>
     <nav class="navigation">
-        <ul>
+      <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="menu.html">Menu</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
-        </ul>
+      </ul>
     </nav>
   </header>
 
   <main class="content">
-    <div class="gallery">
-      <h2>Gallery</h2>
-      <div class="slider">
-        <div class="slides">
-          <div class="slide">
-            <img src="img/interior1.webp" alt="Interior" />
-          </div>
-          <div class="slide">
-            <img src="img/burger.webp" alt="Burger" />
-          </div>
-          <div class="slide">
-            <img src="img/fries.webp" alt="Fries" />
-          </div>
-          <div class="slide">
-            <img src="img/exterior.webp" alt="Exterior" />
-          </div>
-          <div class="slide">
-            <img src="img/pizza.webp" alt="Pizza" />
-          </div>
-          <div class="slide">
-            <img src="img/interior2.webp" alt="Interior2" />
-          </div>
-        </div>
+    <div class="about">
+      <img src="img/exterior.webp" alt="About Us" class="about-img">
+      <div class="about-text">
+        <h2>About Fastest Food</h2>
+        <p>Welcome to Fastest Food, where speed meets flavor! We started with a simple mission: to serve delicious, high-quality meals with the fastest service possible.</p>
+        <p>Our team is passionate about food, and we take pride in using fresh ingredients to craft our signature burgers, fries, and more. Whether you're dining in or taking out, we aim to make every visit satisfying.</p>
+        <p>Thank you for being part of our journey. We look forward to serving you!</p>
       </div>
     </div>
   </main>
@@ -65,6 +49,7 @@
       <p>Sat - Sun: 9:00 AM - 11:00 PM</p>
     </div>
   </footer>
+
   <script>
     document.querySelector(".menu-toggle").addEventListener("click", function() {
       document.querySelector(".navigation ul").classList.toggle("show");

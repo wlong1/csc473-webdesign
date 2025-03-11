@@ -3,15 +3,15 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
-/* Body */
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 /* Header */
@@ -21,7 +21,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 6px 40px 0px 20px;
+  padding: 0px 40px 0px 20px;
   flex-shrink: 0;
 }
 
@@ -47,20 +47,32 @@ body {
   font-weight: bold;
 }
 
+.logo a {
+  height: 50px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
 /* Main Content */
 .content {
   flex: 1;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  padding: 20px;
 }
 
 /* Gallery */
 .gallery {
-  background-color: #fff;
   padding: 20px;
-  flex-grow: 1;
   display: flex;
+  flex: 1;
   flex-direction: column;
   overflow: hidden;
 }
@@ -70,29 +82,107 @@ body {
   margin-bottom: 10px;
 }
 
-/* Slider */
 .slider {
   flex-grow: 1;
   overflow-x: auto;
   overflow-y: hidden;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  align-items: center;
+  height: calc(100% - 50px);
 }
 
 .slides {
   display: flex;
   gap: 10px;
+  height: 100%;
+  align-items: center;
 }
 
 .slide {
   flex: 0 0 auto;
   width: auto;
-  height: 400px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 70vh;
 }
 
 .slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
   border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Menu (unchanged) */
+.menu {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.menu h2 {
+  margin-bottom: 20px;
+}
+
+.menu-container {
+  overflow-x: auto;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.menu-items {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 10px;
+  min-height: 3em;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  justify-content: center;
+}
+
+.menu-item {
+  background-color: #dddcdb;
+  padding: 15px;
+  border-radius: 15px;
+  width: 250px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 335px;
+}
+
+.menu-item img {
+  max-width: 100%;
+  border-radius: 10px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.menu-item h3 {
+  margin: 10px 0 5px;
+}
+
+.menu-item p {
+  font-size: 14px;
+  margin: 5px 0;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.menu-item .price {
+  font-weight: bold;
+  color: #dd7272;
+  font-size: 20px !important;
+  text-align: center;
+  display: flex;
+  margin-top: auto;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Footer */
@@ -127,19 +217,104 @@ body {
   padding: 0;
 }
 
+/* About Section */
+.about {
+  padding: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.about-img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  text-align: left;
+}
+
+/* Contact */
+.contact {
+  max-width: 600px;
+  margin: auto;
+  padding: 0px;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  width: 100px;
+}
+
 /* Mobile */
 @media (max-width: 768px) {
-  .navigation ul {
-    flex-direction: column;
-    align-items: center;
+  .header {
+    flex-direction: row;
+  }
+  
+  .menu-toggle {
+    display: block;
+    position: center;
+    margin-left: auto;
   }
 
-  .slides {
-    gap: 5px;
+  .navigation ul {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 150px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .navigation ul.show {
+    display: flex;
+    width: 100px
+  }
+
+  .navigation ul li {
+    text-align: center;
+    padding: 5px 0;
   }
 
   .slide {
-    width: 200px;
-    height: 120px;
+    max-height: 50vh;
+  }
+
+  .menu-container {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .menu-items {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+
+  .menu-item {
+    flex: 0 0 auto;
+    width: 230px;
   }
 }

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <title>Fastest Food</title>
+  <title>Contact - Fastest Food</title>
 </head>
 <body>
   <header class="header">
@@ -22,35 +22,29 @@
         </ul>
     </nav>
   </header>
-
   <main class="content">
-    <div class="gallery">
-      <h2>Gallery</h2>
-      <div class="slider">
-        <div class="slides">
-          <div class="slide">
-            <img src="img/interior1.webp" alt="Interior" />
-          </div>
-          <div class="slide">
-            <img src="img/burger.webp" alt="Burger" />
-          </div>
-          <div class="slide">
-            <img src="img/fries.webp" alt="Fries" />
-          </div>
-          <div class="slide">
-            <img src="img/exterior.webp" alt="Exterior" />
-          </div>
-          <div class="slide">
-            <img src="img/pizza.webp" alt="Pizza" />
-          </div>
-          <div class="slide">
-            <img src="img/interior2.webp" alt="Interior2" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
+    <section class="contact">
+      <h2>Contact Us</h2>
 
+      <p><strong>Google Maps:</strong></p>
+      <p>
+        <a href="https://www.google.com/maps/place/The+City+College+of+New+York/@40.7933722,-73.9592972,14.87z/data=!3m1!5s0x89c2f66fa8896e67:0x84942178a8ed063!4m6!3m5!1s0x89c2f6657fa896f5:0xa785a9c0ac09561a!8m2!3d40.8200471!4d-73.9492724!16zL20vMDIzMDE?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" target="_blank">Click here to view on Google Maps</a>
+      </p>
+
+      <form action="index.html" method="GET" class="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
   <footer class="footer">
     <nav class="footer-nav">
       <ul>
