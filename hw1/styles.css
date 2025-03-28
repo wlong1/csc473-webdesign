@@ -102,6 +102,7 @@ body {
 
 .slide {
   flex: 0 0 auto;
+  min-width: auto;
   width: auto;
   height: 100%;
   display: flex;
@@ -299,6 +300,7 @@ body {
 
   .slide {
     max-height: 50vh;
+    width: 200%;
   }
 
   .menu-container {
@@ -307,7 +309,6 @@ body {
   }
 
   .menu-items {
-    flex-wrap: nowrap;
     flex-direction: row;
     overflow-x: auto;
     padding-bottom: 10px;
