@@ -7,21 +7,7 @@
   <title>Fastest Food</title>
 </head>
 <body>
-  <header class="header">
-    <div class="logo">
-        <a href="index.html"><img src="img/logo.webp" alt="Logo" /></a>
-        <h2>Fastest Food</h2>
-    </div>
-    <button class="menu-toggle">☰</button>
-    <nav class="navigation">
-        <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-  </header>
+  <div id="header-placeholder"></div>
 
   <main class="content">
     <div class="gallery">
@@ -65,10 +51,10 @@
       <p>Sat - Sun: 9:00 AM - 11:00 PM</p>
     </div>
   </footer>
-  <script>
-    document.querySelector(".menu-toggle").addEventListener("click", function() {
-      document.querySelector(".navigation ul").classList.toggle("show");
-    });
-  </script>
+
+  <div id="footer-placeholder"></div>
+  
+  <script src="scripts/header_footer.js"></script> 
+  <script src="scripts/burger.js"></script> 
 </body>
 </html>
