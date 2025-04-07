@@ -3,8 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(response => response.json())
         .then(menuItems => {
             const menuContainer = document.getElementById("menu");
-            menuContainer.innerHTML = ""; // Just in case
-            
+
             menuItems.forEach(item => {
                 const menuItem = document.createElement("div");
                 menuItem.classList.add("menu-item");

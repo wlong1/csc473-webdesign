@@ -1,11 +1,10 @@
 /* Menu */
 .menu {
     background-color: #fff;
-    padding: 20px;
+    padding: 20px 20px 30px 20px;
     text-align: center;
     display: flex;
     gap: 20px;
-    padding-bottom: 10px;
     min-height: 3em;
     flex-wrap: wrap;
     overflow-x: auto;
@@ -13,7 +12,8 @@
 }
 
 .menu h2 {
-    margin-bottom: 20px;
+    margin: 0px;
+    width: 100%;
 }
 
 .menu-item {
