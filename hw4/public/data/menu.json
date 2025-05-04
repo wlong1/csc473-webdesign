@@ -1,0 +1,44 @@
+[
+    {
+        "id": "burger",
+        "name": "Classic Burger",
+        "description": "Juicy beef patty with fresh lettuce, tomato, and cheese.",
+        "price": 88.99,
+        "img": "item_burger.webp"
+    },
+    {
+        "id": "fries",
+        "name": "French Fries",
+        "description": "Crispy golden fries.",
+        "price": 32.99,
+        "img": "item_fries.webp"
+    },
+	{
+        "id": "salt_fries",
+        "name": "Salted French Fries",
+        "description": "Crispy golden fries, but with salt.",
+        "price": 99.99,
+        "img": "item_fries.webp"
+    },
+    {
+        "id": "pizza",
+        "name": "Authentic Pizza",
+        "description": "Fresh mozzarella, delicious pepperoni, and handmade tomato sauce.",
+        "price": 1200.99,
+        "img": "item_pizza.webp"
+    },
+    {
+        "id": "fake_pizza",
+        "name": "Inauthentic Pizza",
+        "description": "Pizza, but for the masses.",
+        "price": 120.99,
+        "img": "item_pizza.webp"
+    },
+    {
+        "id": "drink",
+        "name": "Soft Drink",
+        "description": "Refreshing soda available in multiple flavors.",
+        "price": 100.99,
+        "img": "item_soda.webp"
+    }
+]
