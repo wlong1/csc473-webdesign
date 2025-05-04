@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 export default function Home() {
     const images = [
         { name: 'interior1', alt: 'Interior' },
@@ -7,6 +9,9 @@ export default function Home() {
         { name: 'pizza', alt: 'Pizza' },
         { name: 'interior2', alt: 'Interior' }
     ];
+    useEffect(() => {
+        document.title = "Fastest Food - Home";
+    }, []);
   
     return (
         <main className="content">

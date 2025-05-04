@@ -17,6 +17,8 @@ export default function Cart() {
     }, []);
 
     useEffect(() => {
+        document.title = "Fastest Food - Cart";
+        
         if (menuData.length) {
         const cart = JSON.parse(Cookies.get('cart') || '{}');
         const items = [];

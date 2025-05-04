@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -18,6 +18,10 @@ export default function Contact() {
     const handleSubmit = (e) => {
         e.preventDefault();
     };
+
+    useEffect(() => {
+        document.title = "Fastest Food - Contact";
+    }, []);
 
     return (
         <main className="content">

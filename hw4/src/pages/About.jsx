@@ -1,4 +1,9 @@
+import { useEffect } from 'react';
+
 export default function About() {
+    useEffect(() => {
+        document.title = "Fastest Food - About";
+    }, []);
     return (
         <main className="content">
             <div className="about">

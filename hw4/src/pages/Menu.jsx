@@ -7,10 +7,11 @@ export default function Menu() {
     const [addedItems, setAddedItems] = useState({});
 
     useEffect(() => {
-    fetch('/data/menu.json')
-        .then(res => res.json())
-        .then(setMenuItems)
-        .catch(console.error);
+        document.title = "Fastest Food - Menu";
+        fetch('/data/menu.json')
+            .then(res => res.json())
+            .then(setMenuItems)
+            .catch(console.error);
     }, []);
 
     const handleAddToCart = (itemId) => {
